@@ -18,7 +18,20 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material3.*
+import androidx.compose.material3.Button
+import androidx.compose.material3.Card
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.Switch
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -39,7 +52,17 @@ fun RuleListScreen(
     onManageAppsClicked: () -> Unit
 ) {
     val rules by viewModel.rules.collectAsState()
+    val error by viewModel.error.collectAsState()
     val context = LocalContext.current
+    val snackbarHostState = remember { SnackbarHostState() }
+
+    // Mostrar erros via Snackbar
+    LaunchedEffect(error) {
+        error?.let {
+            snackbarHostState.showSnackbar(it)
+            viewModel.clearError()
+        }
+    }
 
     var isServiceEnabled by remember {
         mutableStateOf(SharedPrefs.isServiceEnabled(context))
@@ -50,6 +73,7 @@ fun RuleListScreen(
     )
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(id = R.string.app_name)) },
@@ -118,7 +142,7 @@ fun RuleListScreen(
                         onIncreasePriority = { viewModel.increaseRulePriority(rule) },
                         onDecreasePriority = { viewModel.decreaseRulePriority(rule) }
                     )
-                    Divider()
+                    HorizontalDivider()
                 }
             }
         }

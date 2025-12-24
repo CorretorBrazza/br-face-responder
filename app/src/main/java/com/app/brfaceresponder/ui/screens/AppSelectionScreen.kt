@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -51,7 +51,7 @@ fun AppSelectionScreen(
                 title = { Text(stringResource(id = R.string.select_apps)) },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = stringResource(id = R.string.back))
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back))
                     }
                 }
             )
@@ -65,8 +65,11 @@ fun AppSelectionScreen(
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             items(messagingApps) { appInfo ->
+                val icon = remember(appInfo.packageName) {
+                    getAppIcon(appInfo.packageName, packageManager)
+                }
                 AppItem(
-                    appInfo = appInfo.copy(icon = getAppIcon(context, appInfo.packageName, packageManager)), // Get icon dynamically
+                    appInfo = appInfo.copy(icon = icon),
                     initialChecked = enabledAppsState.value.contains(appInfo.packageName),
                     onCheckedChange = { isChecked ->
                         SharedPrefs.setAppEnabled(context, appInfo.packageName, isChecked)
@@ -111,13 +114,10 @@ fun AppItem(appInfo: AppInfo, initialChecked: Boolean, onCheckedChange: (Boolean
     }
 }
 
-@Composable
-fun getAppIcon(context: Context, packageName: String, packageManager: PackageManager): android.graphics.drawable.Drawable? {
-    return remember(packageName) {
-        try {
-            packageManager.getApplicationIcon(packageName)
-        } catch (e: PackageManager.NameNotFoundException) {
-            null
-        }
+private fun getAppIcon(packageName: String, packageManager: PackageManager): android.graphics.drawable.Drawable? {
+    return try {
+        packageManager.getApplicationIcon(packageName)
+    } catch (e: PackageManager.NameNotFoundException) {
+        null
     }
 }

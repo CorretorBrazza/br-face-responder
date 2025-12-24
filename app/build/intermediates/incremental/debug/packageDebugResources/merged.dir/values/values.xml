@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#4CAF50</color>
+    <string name="add_new_rule">Add New Rule</string>
+    <string name="add_rule">Add Rule</string>
+    <string name="app_name">BR FACE RESPONDER</string>
+    <string name="auto_reply_service">Auto Reply Service</string>
+    <string name="back">Back</string>
+    <string name="decrease_priority">Decrease Priority</string>
+    <string name="delay_label">Delay (seconds)</string>
+    <string name="delay_placeholder">e.g., 5</string>
+    <string name="delete_rule">Delete Rule</string>
+    <string name="facebook_messenger">Facebook Messenger</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="if_message_contains">If message contains: %s</string>
+    <string name="increase_priority">Increase Priority</string>
+    <string name="instagram">Instagram</string>
+    <string name="keyword_label">Keyword</string>
+    <string name="keyword_placeholder">e.g., hello</string>
+    <string name="permission_needed">Notification listener permission needed for the app to work.</string>
+    <string name="priority_label">Priority</string>
+    <string name="priority_placeholder">e.g., 0</string>
+    <string name="reply_label">Reply Message</string>
+    <string name="reply_placeholder">e.g., Hi there!</string>
+    <string name="reply_with">Reply with: %s</string>
+    <string name="rules">Rules</string>
+    <string name="save">Save</string>
+    <string name="select_apps">Select Apps</string>
+    <string name="use_regex">Use Regex</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="whatsapp_business">WhatsApp Business</string>
+    <style name="Theme.BRFaceResponder" parent="android:Theme.Material.Light.NoActionBar"/>
+</resources>

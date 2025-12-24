@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_new_rule">Adicionar Nova Regra</string>
+    <string name="add_rule">Adicionar Regra</string>
+    <string name="app_name">BR FACE RESPONDER</string>
+    <string name="auto_reply_service">Serviço de Auto-Resposta</string>
+    <string name="back">Voltar</string>
+    <string name="decrease_priority">Diminuir Prioridade</string>
+    <string name="delay_label">Atraso na Resposta (segundos)</string>
+    <string name="delay_placeholder">ex: \'3\'</string>
+    <string name="delete_rule">Deletar Regra</string>
+    <string name="facebook_messenger">Facebook Messenger</string>
+    <string name="grant_permission">Conceder Permissão</string>
+    <string name="if_message_contains">Se a mensagem contém: "%s"</string>
+    <string name="increase_priority">Aumentar Prioridade</string>
+    <string name="instagram">Instagram</string>
+    <string name="keyword_label">Se a mensagem contém…</string>
+    <string name="keyword_placeholder">ex: \'olá\'</string>
+    <string name="permission_needed">Permissão necessária para ler notificações.</string>
+    <string name="priority_label">Prioridade (0 = mais alta)</string>
+    <string name="priority_placeholder">ex: \'0\'</string>
+    <string name="reply_label">Responder com…</string>
+    <string name="reply_placeholder">ex: \'Olá, tudo bem?\'</string>
+    <string name="reply_with">Responder com: "%s"</string>
+    <string name="rules">Regras</string>
+    <string name="save">Salvar</string>
+    <string name="select_apps">Selecionar Aplicativos</string>
+    <string name="use_regex">Usar Expressão Regular (Regex)</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="whatsapp_business">WhatsApp Business</string>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.2.1" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.app.brfaceresponder.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnsafeImplicitIntentLaunch">
+            <map id="actionsSent">
+                    <map id="android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS (used to start an activity)">
+                        <location id="0"
+                            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/app/brfaceresponder/ui/screens/RuleListScreen.kt"
+                            line="101"
+                            column="51"
+                            startOffset="4239"
+                            endLine="101"
+                            endColumn="105"
+                            endOffset="4293"/>
+                    </map>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.mipmap.ic_launcher"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/ic_launcher.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="5"
+            endColumn="17"
+            endOffset="267"/>
+        <location id="R.string.whatsapp_business"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="28"
+            column="13"
+            startOffset="1493"
+            endLine="28"
+            endColumn="37"
+            endOffset="1517"/>
+        <location id="R.string.whatsapp"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="27"
+            column="13"
+            startOffset="1447"
+            endLine="27"
+            endColumn="28"
+            endOffset="1462"/>
+        <location id="R.string.facebook_messenger"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="26"
+            column="13"
+            startOffset="1381"
+            endLine="26"
+            endColumn="38"
+            endOffset="1406"/>
+        <location id="R.string.instagram"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="29"
+            column="13"
+            startOffset="1557"
+            endLine="29"
+            endColumn="29"
+            endOffset="1573"/>
+        <entry
+            name="model"
+            string="color[ic_launcher_background(D)],drawable[ic_launcher_foreground(U)],mipmap[ic_launcher_round(D),ic_launcher(D)],string[whatsapp(D),auto_reply_service(U),save(U),back(U),rules(U),add_new_rule(U),instagram(D),add_rule(U),decrease_priority(U),whatsapp_business(D),reply_label(U),select_apps(U),keyword_placeholder(U),priority_label(U),use_regex(U),permission_needed(U),reply_placeholder(U),increase_priority(U),facebook_messenger(D),grant_permission(U),if_message_contains(U),keyword_label(U),app_name(U),delete_rule(U),delay_placeholder(U),delay_label(U),priority_placeholder(U),reply_with(U)],style[Theme_BRFaceResponder(U)];2^0^1,3^0^1;;;"/>
+        <location id="R.mipmap.ic_launcher_round"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/ic_launcher_round.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="5"
+            endColumn="17"
+            endOffset="267"/>
+        <location id="R.color.ic_launcher_background"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="3"
+            column="12"
+            startOffset="62"
+            endLine="3"
+            endColumn="41"
+            endOffset="91"/>
+    </map>
+
+</incidents>

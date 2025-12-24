@@ -1,0 +1,35 @@
+R_DEF: Internal format may change without notice
+local
+color ic_launcher_background
+drawable ic_launcher_foreground
+mipmap ic_launcher
+mipmap ic_launcher_round
+string add_new_rule
+string add_rule
+string app_name
+string auto_reply_service
+string back
+string decrease_priority
+string delay_label
+string delay_placeholder
+string delete_rule
+string facebook_messenger
+string grant_permission
+string if_message_contains
+string increase_priority
+string instagram
+string keyword_label
+string keyword_placeholder
+string permission_needed
+string priority_label
+string priority_placeholder
+string reply_label
+string reply_placeholder
+string reply_with
+string rules
+string save
+string select_apps
+string use_regex
+string whatsapp
+string whatsapp_business
+style Theme.BRFaceResponder
